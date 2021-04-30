@@ -25,7 +25,7 @@ SECRET_KEY = '04_(2$57wjs^y%bo11&vb3%bc*w6173i@9cg=#apd72u9s4=lv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1' , 'a--shopify.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1' , 'simarvelly1234-shopify2.zeet.app']
 
 
 # Application definition
