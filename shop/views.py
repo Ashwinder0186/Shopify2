@@ -44,7 +44,7 @@ UserModel = get_user_model()
 
 
 
-MERCHANT_KEY = 'muAbf1DOStdDOzFl'
+MERCHANT_KEY = 'Mqd!&1t#%KNV8nhI'
 
 def index(request):
     if request.user.is_anonymous:
@@ -173,7 +173,7 @@ def checkout(request):
         # Request paytm to transfer the amount to your account after payment by user
         param_dict = {
 
-                'MID': 'yPWbiG78870241339146',
+                'MID': 'SNNbqq46625404010766',
                 'ORDER_ID': str(order.order_id),
                 'TXN_AMOUNT': str(amount),
                 'CUST_ID': email,
