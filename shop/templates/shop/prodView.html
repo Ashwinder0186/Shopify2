@@ -1,0 +1,64 @@
+{% extends 'shop/base.html' %}
+
+{% block title%} {{product.product_name}} - My Awesome Cart{% endblock %}
+{% block body %}
+<h1>Product Details </h1
+<div class="container my-4">
+    <div class="row">
+    <div class="col-md-4">
+    <div class="row" mx-2>
+        <img src="/media/{{product.image}}" width="380px" height="380px">
+    </div>
+    </div>
+
+    <div class="col-md-8">
+        <h5>{{product.product_name}}</h5>
+        <p><b>Rs.{{product.price}} </b></p>
+        <p>{{product.desc}}</p>
+
+
+    </div>
+    </div>
+
+
+</div>
+
+
+
+<footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-0 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-0">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="//www.facebook.com/simar.kataria.10/" role="button"
+        >FACEBOOK</a>
+
+   
+   
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="//www.instagram.com/ashwinder_1/" role="button"
+        >Instagram</a>
+
+
+      <!-- youtube -->
+      <a class="btn btn-outline-light btn-floating m-1" href="//www.youtube.com/channel/UCOwRW7DWzkhKQl1rpSCn9UA" role="button"
+        >youtube</a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-white" href="/shop">mycart</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+{% endblock %}
+
+
+
+

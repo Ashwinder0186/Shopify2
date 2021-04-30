@@ -1,0 +1,133 @@
+{% extends 'shop/basic.html' %}
+{% block body %}
+<div class="container">
+
+<div class="row justify-content-center">
+
+
+<div class="card bg-dark text-white my-3" style="width: 40rem;" >
+<div class="row justify-content-center">
+  <img class="card-img-top" src="{{request.user.userdetails.image.url}}" alt="Card image cap" style="height:20rem;width:20rem"></div>
+  <div class="card-body">
+
+  <div class="row justify-content-center">
+    <h1 class="card-title">User Profile</h1></div>
+    <b><h4 class="card-text">First Name :   {{request.user.first_name}}</h4></b><br>
+    <b><h4 class="card-text">Last Name :   {{request.user.last_name}}</h4></b><br>
+    <b><h4 class="card-text"> Email :       {{request.user.email}}</h4></b><br>
+    <b><h4 class="card-text"> Phone :       {{request.user.userdetails.phone}}</h4></b><br>
+    <b><h4 class="card-text"> User-Name :       {{request.user.username}}</h4></b><br>
+
+  <div class="row justify-content-center">
+     <!-- Trigger the modal with a button -->
+          <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Update Profile</button>
+  </div>
+  <br>
+              <h4>Follow us</h4>
+            <ul>
+              <li><a type="button" class="btn btn-primary" href="https://www.facebook.com/simar.kataria.10/">Facebook<i class="fab fa-instagram"></i></a></li><br>
+              <li><a type="button" class="btn btn-primary"href="https://www.youtube.com/channel/UCOwRW7DWzkhKQl1rpSCn9UA">Youtube<i class="fab fa-youtube"></i></a></li><br>
+              <li><a type="button" class="btn btn-primary" href="https://www.instagram.com/ashwinder_1/">Instagram<i class="fab fa-instagram"></i></a></li><br>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+          <body><div class="row justify-content-center">
+    <h1> welcome</h1></div><br>
+    <div class="row justify-content-center">
+    <h1>{{request.user.first_name}} {{request.user.last_name}}</h1>
+    </div><br>
+    <div class="row justify-content-center"> <br><img src="{{request.user.userdetails.image.url}}" width="150"height="150"><br> </div>
+ 
+   
+
+ 
+<div class="container" style="margin-top: 20px;">  
+        <div class="row justify-content-center">  
+            <div class="col-sm-7 sm-5">  
+                  
+                <form method="post" enctype="multipart/form-data">  
+                    {% csrf_token %}  
+                    <div class="form-group"> 
+                <b>{{u_form.as_p}}</b>
+                <b>{{p_form.as_p}}</b>
+    <button class="btn btn-primary" type="submit">update</button>
+    
+
+
+    </div>
+      </div>
+        </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+
+
+<footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-0 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-0">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="//www.facebook.com/simar.kataria.10/" role="button"
+        >FACEBOOK</a>
+
+   
+   
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="//www.instagram.com/ashwinder_1/" role="button"
+        >Instagram</a>
+
+
+      <!-- youtube -->
+      <a class="btn btn-outline-light btn-floating m-1" href="//www.youtube.com/channel/UCOwRW7DWzkhKQl1rpSCn9UA" role="button"
+        >youtube</a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-white" href="/shop">mycart</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+</body>
+
+{% endblock  %}
